@@ -12,8 +12,10 @@ for(let i = 0; i < elementos.length; i++ ){
     let {tag, texto} = elementos[i];
     let tagCriada = document.createElement(tag);
     tagCriada.innerHTML = texto; //Ou pode-se usar 'innerText' em vez de 'innerHTML' para evitar que o texto seja interpretado como código HTML.
-    let textoCriado = document.createTextNode(texto);
-    tagCriada.appendChild(textoCriado);
+    //ou pode-se criar um nó de texto e adicioná-lo à tag criada, como mostrado abaixo:
+    // let textoCriado = document.createTextNode(texto);
+    // tagCriada.appendChild(textoCriado);
+
     div.appendChild(tagCriada);
 }
 console.log(div)
