@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="background: red;">Cabeçalho</h1>
+    <p><b>Lorem ipsum,</b> <strong>dolor</strong> <i>sit amet </i> <em>consectetur</em> <a href="https://developer.mozilla.org/en-US/" target="_blank">adipisicing elit <img src="https://e7.pngegg.com/pngimages/868/829/png-clipart-white-and-blue-animal-print-logo-mdn-logo-icons-logos-emojis-tech-companies.png" alt="Descrição da imagem" height="44" width="50"></a>.<del>Eos</del> <ins> facere</ins> <s>nam temporibus</s>, <u>rem ea nulla</u> <small>similique blanditiis</small> <sup>o</sup>mni<sub>s</sub> consequuntur? <br> Vero modi <q>impedit</q> </p>
+    <blockquote>rem nihil eveniet </blockquote>
+    <p>quam perferendis officia fugit? Nobis.</p>
+    <hr>
+    <code>console.log("Hello, World!")</code>
+    <pre><code>const elementos = [
+    {tag: 'p', texto: 'Qualquer texto'},
+    {tag: 'div', texto: 'Frase 2'},
+    {tag: 'footer', texto: 'Frase 3'},
+    {tag: 'section', texto: 'Frase 4'},
+    ];
+
+    const container =  document.querySelector('.container');
+    const div = document.createElement('div');
+
+    for(let i = 0; i < elementos.length; i++ ){
+        let {tag, texto} = elementos[i];
+        let tagCriada = document.createElement(tag);
+        tagCriada.innerHTML = texto; //Ou pode-se usar 'innerText' em vez de 'innerHTML' para evitar que o texto seja interpretado como código HTML.
+        //ou pode-se criar um nó de texto e adicioná-lo à tag criada, como mostrado abaixo:
+        // let textoCriado = document.createTextNode(texto);
+        // tagCriada.appendChild(textoCriado);
+
+        div.appendChild(tagCriada);
+    }
+    console.log(div)
+    container.appendChild(div);</code></pre>
+    <p><span style="color: red; font-size: 18px;">Lorem</span> ipsum, dolor sit amet consectetur adipisicing elit. <div style="color: red">Eos facere</div> nam temporibus, rem ea nulla similique blanditiis omnis consequuntur? Vero modi impedit rem nihil eveniet quam perferendis officia fugit? Nobis.</p>
+</body>
+</html> 
