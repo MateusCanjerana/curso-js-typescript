@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listas</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background: rgba(0,0,0,0.7);
+            align-items: center;
+        }
+        nav a{
+            color:#ffffff;
+            text-decoration: none;
+            font-family: sans-serif;
+            background: blue;
+            padding: 10px 20px;
+            display: block;
+        }
+        nav a:hover{
+            color: red ;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;   
+        }
+    </style>
 </head>
 <body>
-    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Listas não ordenadas -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <!-- Listas ordenadas -->  
+    <ol type="1" start="5">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <!-- Nas listas ordenadas o "type" alterará a forma de exibição dos itens, podendo ser: A, a, I, i, 1. Se adicionar o atributo "start" é possível definir o número inicial da lista, por exemplo: <ol type="A" start="5">. -->
+
+    <dl>
+        <dt>Café</dt>
+        <dd>bebida preta quente</dd>
+        <dt>Leite</dt>
+        <dd>bebida branca quente</dd>
+    </dl>
 </body>
 </html>
